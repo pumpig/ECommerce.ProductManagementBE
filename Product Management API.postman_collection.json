@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "26327606-088c-433f-8d6f-e473d59826b8",
+		"name": "Product Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6768807"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/api/products?pageIndex=1&pageSize=20",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/api/products/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Sku",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "CategoryId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "StockQuantity",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Image",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/products",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ProductId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Sku",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "CategoryId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "StockQuantity",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Image",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/products",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product Stock",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"quantity\": 0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/products/3fa85f64-5717-4562-b3fc-2c963f66afa6/stock",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa6",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/api/products/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product Price",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"price\": 0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/products/3fa85f64-5717-4562-b3fc-2c963f66afa6/price",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa6",
+						"price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
